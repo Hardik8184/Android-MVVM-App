@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'io.fabric'
+
+android {
+
+  compileSdkVersion rootProject.compileSdkVersion
+  buildToolsVersion rootProject.buildToolsVersion
+
+  defaultConfig {
+    applicationId "com.hardik.mvvmapp"
+    minSdkVersion rootProject.minSdkVersion
+    targetSdkVersion rootProject.targetSdkVersion
+    versionCode 1
+    versionName "1.0"
+    //    versionName "1.9.3"
+
+    vectorDrawables.useSupportLibrary = true
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    multiDexEnabled true
+  }
+
+  kotlinOptions {
+    jvmTarget = "1.8"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  dataBinding {
+    enabled = true
+  }
+  testOptions {
+    unitTests.returnDefaultValues = true
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation "androidx.multidex:multidex:$rootProject.multidexVersion"
+
+  // required if you want to use Mockito for unit tests
+  testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+  testImplementation 'org.mockito:mockito-inline:2.23.4'
+  // dependencies for local unit tests
+  //  testImplementation "junit:junit:$rootProject.junitVersion"
+  //  testImplementation "androidx.arch.core:core-testing:$rootProject.archcoreVersion"
+
+  //Junit 5
+  testImplementation 'org.assertj:assertj-core:3.11.1'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
+  testImplementation 'org.junit.jupiter:junit-jupiter-params:5.3.2'
+  testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
+
+  // UI Testing
+  implementation 'androidx.test:core:1.2.0'
+  testImplementation 'androidx.test.ext:junit:1.1.1'
+
+  // UI Testing
+  androidTestImplementation "androidx.test:runner:$rootProject.runnerVersion"
+  androidTestImplementation "androidx.test:rules:$rootProject.runnerVersion"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+  androidTestImplementation "androidx.test.espresso:espresso-contrib:$rootProject.espressoVersion"
+  implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
+  debugImplementation 'androidx.fragment:fragment-testing:1.2.0-rc02'
+
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+  implementation group: 'androidx.lifecycle', name: 'lifecycle-viewmodel-ktx',
+      version: '2.2.0-rc02'
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+  // android support libraries
+  implementation "com.google.android.material:material:$rootProject.materialVersion"
+  implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+  implementation "androidx.cardview:cardview:$rootProject.cardViewVersion"
+  implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerVersion"
+  implementation 'androidx.browser:browser:1.0.0'
+
+  // google play services
+  implementation "com.google.android.gms:play-services-location:$rootProject.playServicesVersion"
+  implementation "com.google.android.gms:play-services-maps:$rootProject.playServicesVersion"
+  implementation 'com.google.android.gms:play-services-vision:19.0.0'
+
+  // barcode reader
+//  implementation("info.androidhive:barcode-reader:1.1.5") {
+//    exclude group: 'com.google.android.material', module: 'material'
+//    exclude group: 'androidx.appcompat', module: 'appcompat'
+//  }
+  implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+
+  // Navigation
+  implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
+  implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+
+  // android sdp
+  implementation "com.intuit.sdp:sdp-android:$rootProject.sdpVersion"
+  implementation "com.hardik.hsdp:scalablesize-android:$rootProject.hsdpVersion"
+
+  // Android Data binding
+  implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
+
+  // facebook
+  implementation "com.facebook.android:facebook-share:$rootProject.facebookVersion"
+
+  // dependency injection
+  implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+  implementation "com.google.dagger:dagger-android:$rootProject.dagger2Version"
+  implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
+  kapt "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+  kapt "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
+
+  // retrofit networking libraries
+  implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit2Version"
+  implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2Version"
+  implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit2Version"
+  implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingVersion"
+
+  // image
+  implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+  kapt "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+
+  implementation "org.jsoup:jsoup:$rootProject.jsoupVersion"
+
+  // reactive
+  implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+  implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+  implementation "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxbinding" // RxBinding
+
+  // leak canary
+  debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.leakcanary"
+  releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.leakcanary"
+
+  // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+  implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+
+  // fabric
+  implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+    transitive = true
+  }
+  implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+}

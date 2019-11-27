@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+      name="viewModel"
+      type="com.hardik.mvvmapp.login.viewmodel.LoginViewModel" />
+
+  </data>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+      android:id="@+id/llRoot"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      tools:context=".login.view.LoginActivity">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200hsdp"
+        android:layout_gravity="center"
+        android:background="#F7F7F7"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/top_background" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1hsdp"
+        android:background="#288271" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5hsdp"
+        android:fontFamily="@font/open_sans_regular"
+        android:gravity="center|start"
+        android:padding="@dimen/_10hsdp"
+        android:text="@string/str_login_hint"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_11font_ssp" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15hsdp"
+        android:layout_marginEnd="@dimen/_15hsdp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/edtEmail"
+          style="@style/editText"
+          android:gravity="center|start"
+          android:hint="@string/str_email"
+          android:inputType="textEmailAddress"
+          android:nextFocusDown="@+id/edtPassword" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/edtPassword"
+          style="@style/editText"
+          android:layout_marginTop="@dimen/_10hsdp"
+          android:hint="@string/str_password"
+          android:imeOptions="actionDone"
+          android:inputType="textPassword" />
+
+      </LinearLayout>
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="@dimen/_100hsdp"
+        android:layout_height="@dimen/_36hsdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20hsdp"
+        android:background="@drawable/btn_shadow_red_selected"
+        android:fontFamily="@font/kreon_bold"
+        android:onClick="@{() -> viewModel.onLoginClick()}"
+        android:padding="@dimen/_5hsdp"
+        android:text="@string/str_login"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14font_ssp" />
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="@dimen/_180hsdp"
+        android:layout_height="@dimen/_36hsdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10hsdp"
+        android:background="@drawable/btn_shadow_blue_selected"
+        android:fontFamily="@font/kreon_regular"
+        android:onClick="@{() -> viewModel.onRegisterClick()}"
+        android:padding="@dimen/_5hsdp"
+        android:text="@string/str_register"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_13font_ssp" />
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+</layout>

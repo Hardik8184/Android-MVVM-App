@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.hardik.mvvmapp">
+
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+  <uses-feature
+    android:glEsVersion="0x00020000"
+    android:required="true" />
+
+  <!--    android:networkSecurityConfig="@xml/network_security_config"-->
+
+  <application
+    android:name=".MyApplication"
+    android:allowBackup="true"
+    android:appComponentFactory="whateverString"
+    android:fullBackupContent="@xml/backup_descriptor"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    android:usesCleartextTraffic="true"
+    tools:replace="android:appComponentFactory"
+    tools:targetApi="p">
+
+    <activity android:name=".splash.view.SplashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+      </intent-filter>
+    </activity>
+
+    <activity
+      android:name=".login.view.LoginActivity"
+      android:screenOrientation="portrait" />
+
+    <activity
+      android:name=".register.view.RegisterActivity"
+      android:screenOrientation="portrait" />
+
+    <activity
+      android:name=".home.view.HomeActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme1" />
+
+    <activity
+      android:name=".changepassword.view.ChangePasswordActivity"
+      android:screenOrientation="portrait" />
+
+    <activity
+      android:name=".updateinfo.view.UpdateInfoActivity"
+      android:screenOrientation="portrait" />
+
+    <activity
+      android:name=".home.view.TestActivity"
+      android:screenOrientation="portrait" />
+
+    <meta-data
+      android:name="com.facebook.sdk.ApplicationId"
+      android:value="@string/app_id" />
+
+    <meta-data
+      android:name="io.fabric.ApiKey"
+      android:value="daca44e2a647bf8e6b268abf491ff6b763b51fe1" />
+
+    <provider
+      android:name="com.facebook.FacebookContentProvider"
+      android:authorities="com.facebook.app.FacebookContentProvider486782875070279"
+      android:exported="false" />
+
+    <provider
+      android:name="com.facebook.internal.FacebookInitProvider"
+      android:authorities="${applicationId}.FacebookInitProvider"
+      android:exported="false" />
+
+    <!-- API Key Account: hardik.techark@gmail.com -->
+    <meta-data
+      android:name="com.google.android.geo.API_KEY"
+      android:value="AIzaSyBGfkFH34ES2UwfcFzMfSMS6iJ_OEmsv1k" />
+
+    <!--<activity-->
+    <!--android:name=".home.view.QrCodeScannerActivity"-->
+    <!--android:screenOrientation="landscape" />-->
+
+  </application>
+
+</manifest>

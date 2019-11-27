@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_255sdp"
+    android:background="@drawable/app_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/badgeImage"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_10sdp"
+        tools:src="@drawable/no_badge"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgClose"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_close"
+        />
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/badgeTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:ellipsize="end"
+      android:fontFamily="@font/kreon_regular"
+      android:gravity="center|top"
+      android:textColor="@color/colorRed"
+      android:textSize="@dimen/_20sdp"
+      tools:text="Suffolk Love-Vah"
+      />
+
+  <TextView
+      android:id="@+id/badgeDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/_5sdp"
+      android:layout_marginEnd="@dimen/_20sdp"
+      android:layout_marginStart="@dimen/_20sdp"
+      android:layout_marginTop="@dimen/_5sdp"
+      android:ellipsize="end"
+      android:fontFamily="@font/open_sans_regular"
+      android:gravity="center|top"
+      android:lineSpacingExtra="@dimen/_3sdp"
+      android:padding="@dimen/_5sdp"
+      android:textColor="@color/colorBlack"
+      android:textSize="@dimen/_11sdp"
+      tools:text="You unlocked this badge because you're nuts about a Suffolk business! Great job showing the love!"
+      />
+
+</LinearLayout>

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+
+    <variable
+        name="isAddressVisible"
+        type="boolean"
+        />
+
+    <variable
+        name="isAddress2Visible"
+        type="boolean"
+        />
+
+    <variable
+        name="isCityVisible"
+        type="boolean"
+        />
+
+    <variable
+        name="isZipVisible"
+        type="boolean"
+        />
+
+    <variable
+        name="isBirthDateVisible"
+        type="boolean"
+        />
+
+    <import type="android.view.View"/>
+
+    <variable
+        name="viewModel"
+        type="com.hardik.mvvmapp.fragment.profile.viewmodel.ProfileFragmentViewModel"
+        />
+
+  </data>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#EFEFEF"
+      >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <LinearLayout
+          android:id="@+id/llRoot"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:paddingBottom="@dimen/_5sdp"
+          >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardElevation="@dimen/_4sdp"
+            >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="@dimen/_5sdp"
+              >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                >
+
+              <TextView
+                  android:id="@+id/txtUserName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:fontFamily="@font/kreon_regular"
+                  android:gravity="center|start"
+                  android:text="@{viewModel.strUserName}"
+                  android:textColor="@color/profile_user_name"
+                  android:textSize="@dimen/_22sdp"
+                  tools:text="@string/user_name"
+                  />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_10sdp"
+                  android:orientation="horizontal"
+                  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/str_place_email"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica_neue_thin"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@{viewModel.strEmail}"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/user_email"
+                    />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:isGone="@{isAddressVisible}"
+                  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/str_place_address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUserAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica_neue_thin"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@{viewModel.strAddress}"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/user_address"
+                    />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:isGone="@{isAddress2Visible}"
+                  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/str_place_address2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUserAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica_neue_thin"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@{viewModel.strAddress2}"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/user_address"
+                    />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:isGone="@{isCityVisible}"
+                  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/str_place_city"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUserCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica_neue_thin"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@{viewModel.strCity}"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/user_city"
+                    />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:isGone="@{isZipVisible}"
+                  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/str_place_zip"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUserZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica_neue_thin"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@{viewModel.strZip}"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/user_zip"
+                    />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:isGone="@{isBirthDateVisible}"
+                  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@string/str_place_birthday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUserDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/helvetica_neue_thin"
+                    android:gravity="center|start"
+                    android:padding="@dimen/_1sdp"
+                    android:text="@{viewModel.strBirthDate}"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/user_birthday"
+                    />
+
+              </LinearLayout>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+              <androidx.appcompat.widget.AppCompatButton
+                  android:id="@+id/btnUpdate"
+                  android:layout_width="0dp"
+                  android:layout_height="@dimen/_32sdp"
+                  android:layout_gravity="center"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:layout_weight="1"
+                  android:background="@drawable/btn_shadow_blue_selected"
+                  android:fontFamily="@font/kreon_bold"
+                  android:onClick='@{() -> viewModel.updateInfoClick()}'
+                  android:padding="@dimen/_5sdp"
+                  android:text="@string/str_update_info"
+                  android:textAllCaps="false"
+                  android:textColor="@color/colorWhite"
+                  android:textSize="@dimen/_13sdp"
+                  />
+
+              <androidx.appcompat.widget.AppCompatButton
+                  android:id="@+id/btnChangePassword"
+                  android:layout_width="0dp"
+                  android:layout_height="@dimen/_32sdp"
+                  android:layout_gravity="center"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:layout_weight="1"
+                  android:background="@drawable/btn_shadow_blue_selected"
+                  android:fontFamily="@font/kreon_bold"
+                  android:onClick='@{() -> viewModel.changePasswordClick()}'
+                  android:padding="@dimen/_5sdp"
+                  android:text="@string/str_change_password"
+                  android:textAllCaps="false"
+                  android:textColor="@color/colorWhite"
+                  android:textSize="@dimen/_13sdp"
+                  />
+
+            </TableRow>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/gray"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/_4sdp"
+            >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="@dimen/_5sdp"
+              >
+
+            <TextView
+                android:id="@+id/txtContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/kreon_bold"
+                android:gravity="center|start"
+                android:onClick='@{() -> viewModel.contactUs()}'
+                android:padding="@dimen/_5sdp"
+                android:text="@string/str_contact_us"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14sdp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/light_gray"
+                />
+
+            <TextView
+                android:id="@+id/txtTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/kreon_bold"
+                android:gravity="center|start"
+                android:onClick='@{() -> viewModel.openTermsWebView()}'
+                android:padding="@dimen/_5sdp"
+                android:text="@string/str_terms"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14sdp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/light_gray"
+                />
+
+            <TextView
+                android:id="@+id/txtFAQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/kreon_bold"
+                android:gravity="center|start"
+                android:onClick='@{() -> viewModel.openFaqWebView()}'
+                android:padding="@dimen/_5sdp"
+                android:text="@string/str_faq"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14sdp"
+                />
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignOut"
+            android:layout_width="@dimen/_165sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/btn_shadow_red_selected"
+            android:fontFamily="@font/kreon_bold"
+            android:onClick='@{() -> viewModel.signOutClick()}'
+            android:padding="@dimen/_5sdp"
+            android:text="@string/str_sign_out"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14sdp"
+            />
+
+      </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txtVersionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/open_sans_bold"
+        android:padding="@dimen/_5sdp"
+        android:text="@{viewModel.strVersionName}"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_10sdp"
+        tools:text="1.1"
+        />
+
+  </RelativeLayout>
+
+</layout>

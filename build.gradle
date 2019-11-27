@@ -1,0 +1,77 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+  ext.kotlin_version = '1.3.60'
+  repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.5.2'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
+    classpath 'io.fabric.tools:gradle:1.31.0'
+
+    // NOTE: Do not place your application dependencies here; they belong
+    // in the individual module build.gradle files
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+ext {
+
+  compileSdkVersion = 29
+  minSdkVersion = 16
+  targetSdkVersion = 29
+  buildToolsVersion = '28.0.3'
+
+  // App dependencies
+  multidexVersion = "2.0.1"
+  appCompatVersion = "1.1.0"
+  constraintLayoutVersion = "1.1.3"
+  recyclerVersion = "1.1.0"
+  cardViewVersion = "1.0.0"
+  materialVersion = "1.2.0-alpha02"
+  navigationVersion = '2.2.0-rc02'
+  constraintLayoutVersion = "2.0.0-beta3"
+  lifecycleVersion = "2.2.0-rc02"
+  playServicesVersion = "17.0.0"
+  facebookVersion = "5.1.0"
+  loggingVersion = "3.10.0"
+  gsonVersion = '2.8.2'
+  glideVersion = '4.9.0'
+  sdpVersion = '1.0.6'
+  hsdpVersion = '1.0.0'
+
+  retrofit2Version = '2.4.0'
+  dagger2Version = '2.23'
+  rxjava2Version = '2.1.9'
+  rxandroidVersion = '2.1.1'
+  lifecycle = '1.1.1'
+  rxbinding = '2.2.0'
+  leakcanary = '1.6.2'
+  jsoupVersion = '1.8.3'
+
+  // Test dependencies
+  junitVersion = '4.12'
+  hamcrestVersion = '1.3'
+  archcoreVersion = '2.0.1'
+  runnerVersion = '1.2.0'
+  espressoVersion = '3.2.0'
+  mockitoVersion = '2.23.4'
+}

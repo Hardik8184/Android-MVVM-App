@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+      name="viewModel"
+      type="com.hardik.mvvmapp.updateinfo.viewmodel.UpdateInfoViewModel" />
+
+  </data>
+
+  <LinearLayout
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.view.LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_42sdp"
+      android:background="@color/colorPrimary"
+      android:gravity="center"
+      app:contentInsetEnd="0dp"
+      app:contentInsetLeft="@dimen/_5sdp"
+      app:contentInsetRight="0dp"
+      app:contentInsetStart="@dimen/_5sdp"
+      app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light">
+
+      <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_gravity="center|start"
+        android:contentDescription="@string/app_name"
+        android:onClick="@{() -> viewModel.onBackClick()}"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ico_back_arrow" />
+
+      <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:fontFamily="@font/kreon_regular"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/str_account"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14sdp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="@dimen/_15sdp">
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtFirstName"
+        style="@style/editText"
+        android:hint="@string/str_first_name"
+        android:inputType="text|textCapWords"
+        android:nextFocusDown="@+id/edtLastName"
+        android:text="@{viewModel.strFirstName}" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtLastName"
+        style="@style/editText"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/str_last_name"
+        android:inputType="text|textCapWords"
+        android:nextFocusDown="@+id/edtAddress"
+        android:text="@{viewModel.strLastName}" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/edt_border_background_1"
+        android:gravity="center|start"
+        android:hint="@string/str_email_address"
+        android:padding="@dimen/_5sdp"
+        android:text="@{viewModel.strEmail}"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/_11sdp" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtAddress"
+        style="@style/editText"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/str_address"
+        android:inputType="textCapWords"
+        android:nextFocusDown="@+id/edtAddress1"
+        android:text="@{viewModel.strAddress}" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtAddress1"
+        style="@style/editText"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/str_address_1"
+        android:inputType="textCapWords"
+        android:nextFocusDown="@+id/edtCity"
+        android:text="@{viewModel.strAddress2}" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtCity"
+        style="@style/editText"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/str_city"
+        android:inputType="textCapWords"
+        android:nextFocusDown="@+id/edtZipCode"
+        android:text="@{viewModel.strCity}" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtZipCode"
+        style="@style/editText"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/str_zip_code"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="5"
+        android:text="@{viewModel.strZip}" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDob"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/edt_border_background"
+        android:gravity="center|start"
+        android:hint="@string/str_birth_date"
+        android:onClick="@{() -> viewModel.openDatePickerDialog()}"
+        android:padding="@dimen/_5sdp"
+        android:text="@{viewModel.strBirthDate}"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnUpdate"
+      android:layout_width="@dimen/_165sdp"
+      android:layout_height="@dimen/_36sdp"
+      android:layout_gravity="center"
+      android:background="@drawable/btn_shadow_red_selected"
+      android:fontFamily="@font/kreon_bold"
+      android:onClick="@{() -> viewModel.onUpdateInfoClick()}"
+      android:padding="@dimen/_5sdp"
+      android:text="@string/str_update_account"
+      android:textAllCaps="false"
+      android:textColor="@color/colorWhite"
+      android:textSize="@dimen/_14sdp" />
+
+  </LinearLayout>
+
+</layout>

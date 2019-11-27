@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+
+    <import type="android.view.View"/>
+
+    <variable
+        name="viewModel"
+        type="com.hardik.mvvmapp.fragment.earnheart.viewmodel.EarnAHeartFragmentViewModel"
+        />
+
+  </data>
+
+  <LinearLayout
+      android:id="@+id/llRoot"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical"
+      tools:context=".login.view.LoginActivity"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+      <ImageView
+          android:id="@+id/imgType"
+          android:layout_width="@dimen/_155sdp"
+          android:layout_height="@dimen/_145sdp"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/ic_earned_heart"
+          />
+
+      <TextView
+          android:id="@+id/txtMainTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:fontFamily="@font/kreon_regular"
+          android:gravity="center"
+          android:text="@string/str_you_ve_earned_a_heart"
+          android:textColor="@color/colorRed"
+          android:textSize="@dimen/_20sdp"
+          />
+
+      <TextView
+          android:id="@+id/txtHint"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:fontFamily="@font/kreon_regular"
+          android:gravity="center"
+          android:textColor="@color/monsoon"
+          android:textSize="@dimen/_11sdp"
+          tools:text="Nice one, love-vah. We're super excited about all the sweet rewards you're about to earn."
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_20sdp"
+          android:gravity="center"
+          android:orientation="horizontal"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/_2sdp"
+            android:drawableTop="@drawable/ic_facebook_share"
+            android:fontFamily="@font/kreon_regular"
+            android:gravity="center"
+            android:onClick='@{() -> viewModel.faceBookClick()}'
+            android:text="@string/str_share_on_facebook"
+            android:textColor="@color/monsoon"
+            android:textSize="@dimen/_11sdp"
+            />
+
+        <View
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/_2sdp"
+            android:drawableTop="@drawable/ic_twitter_share"
+            android:fontFamily="@font/kreon_regular"
+            android:gravity="center"
+            android:onClick='@{() -> viewModel.twitterClick()}'
+            android:text="@string/str_post_on_twitter"
+            android:textColor="@color/monsoon"
+            android:textSize="@dimen/_11sdp"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        >
+
+      <LinearLayout
+          android:id="@+id/llBackToHome"
+          android:layout_width="@dimen/_110sdp"
+          android:layout_height="@dimen/_36sdp"
+          android:background="@drawable/btn_shadow_blue_selected"
+          android:gravity="center"
+          android:onClick='@{() -> viewModel.backClick()}'
+          android:orientation="horizontal"
+          >
+
+        <ImageView
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_home_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/kreon_bold"
+            android:padding="@dimen/_1sdp"
+            android:text="@string/str_back_home"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_10sdp"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</layout>

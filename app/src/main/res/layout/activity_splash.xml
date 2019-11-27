@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+      name="viewModel"
+      type="com.hardik.mvvmapp.splash.viewmodel.SplashViewModel" />
+
+  </data>
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_210hsdp"
+      android:layout_gravity="center"
+      android:layout_marginBottom="@dimen/_40hsdp"
+      android:background="#F7F7F7"
+      android:contentDescription="@string/app_name"
+      android:padding="@dimen/_10hsdp"
+      android:src="@drawable/top_background" />
+
+  </LinearLayout>
+
+</layout>

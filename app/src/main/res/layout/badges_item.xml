@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|top"
+    android:padding="@dimen/_2sdp"
+    android:orientation="vertical"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/badgeImage"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_70sdp"
+      android:padding="@dimen/_5sdp"
+      tools:src="@drawable/no_badge"
+      />
+
+  <TextView
+      android:id="@+id/badgeTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:fontFamily="@font/open_sans_regular"
+      android:gravity="center|top"
+      android:layout_marginLeft="@dimen/_5sdp"
+      android:layout_marginRight="@dimen/_5sdp"
+      android:textColor="@color/colorBlack"
+      android:textSize="@dimen/_10sdp"
+      tools:text="Norfolk Love-vah"
+      />
+
+</LinearLayout>

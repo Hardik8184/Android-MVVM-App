@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <dimen name="design_navigation_separator_vertical_padding" tools:override="true">0dp</dimen>
+  <dimen name="fbutton_default_conner_radius">8dp</dimen>
+  <dimen name="fbutton_default_padding_left">10dp</dimen>
+  <dimen name="fbutton_default_padding_right">10dp</dimen>
+  <dimen name="fbutton_default_padding_top">5dp</dimen>
+  <dimen name="fbutton_default_padding_bottom">5dp</dimen>
+  <dimen name="fbutton_default_shadow_height">4dp</dimen>
+
+</resources>

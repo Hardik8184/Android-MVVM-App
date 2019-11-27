@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@id/homeFragment"
+    android:icon="@drawable/ic_side_menu_home"
+    android:title="@string/str_side_menu_home" />
+
+  <item
+    android:id="@+id/menuScanView"
+    android:icon="@drawable/ic_side_menu_scan"
+    android:title="@string/str_side_menu_1" />
+
+  <item
+    android:id="@id/giftRewardFragment"
+    android:icon="@drawable/ic_side_menu_gift_reward"
+    android:title="@string/str_side_menu_2" />
+
+  <item
+    android:id="@id/badgesFragment"
+    android:icon="@drawable/ic_side_menu_badges"
+    android:title="@string/str_side_menu_3" />
+
+  <item
+    android:id="@id/profileFragment"
+    android:icon="@drawable/ic_side_menu_profile"
+    android:title="@string/str_side_menu_4" />
+
+
+</menu>

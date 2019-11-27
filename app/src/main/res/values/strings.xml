@@ -1,0 +1,197 @@
+<resources>
+
+  <string name="app_name">MVVM Android App</string>
+
+  <string name="app_id">486782875070279</string>
+
+  <string name="error_no_internet">It seems that your device not connected to the internet.</string>
+  <string name="error_internal_server">Internal server error.</string>
+  <string name="error_bad_request">Bad request.</string>
+  <string name="error_an_authorized">An Authorized request.</string>
+  <string name="error_unknown_host">Unknown Host Exception</string>
+
+  <string name="location_permission">Location permission is required to work properly. Do you want to try again?</string>
+  <string name="location_title">Location Service disabled</string>
+  <string name="location_msg">Please enable location service. Location is mandatory to use this application.</string>
+  <!--<string name="btn_cancel">Cancel</string>-->
+  <!--<string name="btn_settings">Settings</string>-->
+
+  <!--<string name="grant_permission">Grant Permission</string>-->
+  <!--<string name="permission_camera">This app needs camera permission to scan barcode</string>-->
+  <!--<string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>-->
+  <!--<string name="grant">Grant</string>-->
+  <!--<string name="cancel">Cancel</string>-->
+
+  <!-- Login / Register -->
+  <string name="str_login_hint">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+  <!--<string name="str_why_hello_there">Why hello there,</string>-->
+  <string name="str_first_name">First Name</string>
+  <string name="str_last_name">Last Name</string>
+  <string name="str_email">Email</string>
+  <string name="str_email_address">Email Address</string>
+  <string name="str_friend_email">Your Friend\'s Email</string>
+  <string name="str_password">Password</string>
+  <string name="str_address">Address</string>
+  <string name="str_address_1">Address 2 - (Apt. or Suite)</string>
+  <string name="str_zip_code">ZIP Code</string>
+  <string name="str_city">City</string>
+  <string name="str_birth_date">Birthday</string>
+  <string name="str_login">Login</string>
+  <string name="str_send">Send</string>
+  <string name="str_create_account">Create Account</string>
+  <string name="str_sign_out">Sign Out</string>
+  <string name="str_register">New User? Register Here</string>
+  <string name="str_sign_up">Sign Up for Love-vah</string>
+  <string name="str_register_hint_1">By clicking the big red button, you agree to</string>
+  <string name="str_register_hint_2">our</string>
+  <string name="str_register_hint_3">Privacy Policy</string>
+  <string name="str_register_hint_4">and</string>
+  <string name="str_register_hint_5">Terms of Service</string>
+  <string name="str_already_account">Already have an account?</string>
+  <string name="str_login_here">Login Here</string>
+
+  <!-- Side Menu -->
+  <string name="str_title_home">Home</string>
+  <string name="str_title_give_confirmation">Be A Local Love-vah</string>
+  <string name="str_side_menu_home">Home</string>
+  <string name="str_side_menu_1">Menu 1</string>
+  <string name="str_side_menu_2">Menu 2</string>
+  <string name="str_side_menu_3">Menu 3</string>
+  <string name="str_side_menu_4">Menu 4</string>
+  <string name="str_side_menu_5">Menu 5</string>
+  <string name="str_side_menu_6">Menu 6</string>
+  <string name="str_side_menu_7">Menu 7</string>
+  <string name="str_side_menu_8">Menu 8</string>
+  <string name="str_side_menu_9">Menu 9</string>
+
+  <!-- Account & Setting -->
+  <string name="str_account">Account &amp; Settings</string>
+  <string name="str_update_info">Update Info</string>
+  <string name="str_update_account">Update Account</string>
+  <string name="str_change_password">Change Password</string>
+  <string name="str_contact_us">Contact Us</string>
+  <string name="str_terms">Terms of Service</string>
+  <string name="str_faq">FAQ</string>
+
+  <string name="str_current_password">Current Password</string>
+  <string name="str_new_password">New Password</string>
+  <string name="str_new_password_again">New Password Again</string>
+
+  <!-- Login/Register Validation -->
+  <string name="str_error_empty_first_name">Please enter valid first name</string>
+  <string name="str_error_empty_last_name">Please enter valid last name</string>
+  <string name="str_error_invalid_email_message">Please enter valid email address</string>
+  <string name="str_error_empty_address">Please enter valid address</string>
+  <string name="str_error_empty_address_1">Please enter valid address 1</string>
+  <string name="str_error_empty_city">Please enter valid city name</string>
+  <string name="str_error_empty_zip">Please enter valid zip code</string>
+  <string name="str_error_empty_dob">Please enter valid date of birth</string>
+  <string name="str_error_empty_password_message">Please enter valid password</string>
+
+  <!-- Dummy User -->
+  <string name="user_name">Hardik Dungrani</string>
+  <string name="user_name_sort">Hardik</string>
+  <string name="user_email">hardik.techark@gmail.com</string>
+  <string name="user_address">Surat</string>
+  <string name="user_city">Surat</string>
+  <string name="user_zip">395004</string>
+  <string name="user_birthday">1993/06/10</string>
+
+  <string name="str_place_email">Email:</string>
+  <string name="str_place_address">Address:</string>
+  <string name="str_place_address2">Address2:</string>
+  <string name="str_place_city">City:</string>
+  <string name="str_place_zip">Zip:</string>
+  <string name="str_place_birthday">Birthday:</string>
+  <string name="str_place_last_badge"><![CDATA[Latest Badge: <b><font color=#000000>%s</font></b>]]></string>
+
+  <!--<string name="str_place_email_value">%s</string>-->
+  <!--<string name="str_place_address_value"><![CDATA[<h4><font color=#000000>Address:</font> </h4>%s]]></string>-->
+  <!--<string name="str_place_address2_value"><![CDATA[<h4><font color=#000000>Address2:</font> </h4>%s]]></string>-->
+  <!--<string name="str_place_city_value"><![CDATA[<h4><font color=#000000>City:</font> </h4>%s]]></string>-->
+  <!--<string name="str_place_zip_value"><![CDATA[<h4><font color=#000000>Zip:</font> </h4>%s]]></string>-->
+  <!--<string name="str_place_birthday_value"><![CDATA[<h4><font color=#000000>Birthday:</font> </h4>%s]]></string>-->
+
+  <string name="str_place_time">%s - %s</string>
+  <string name="str_place_city_state">%s, %s (%s Miles away)</string>
+  <string name="str_place_direction">%s %s %s, %s %s</string>
+  <string name="str_place_day">%s:</string>
+
+  <string name="str_scan">Scan A\nPurchase</string>
+  <string name="str_business">Find A\nBusiness</string>
+  <string name="str_gift">Gift A\nReward</string>
+  <string name="str_redeem">Redeem \nReward</string>
+  <string name="str_redeem_reward">Redeem Reward</string>
+
+  <string name="str_back_home">Back to\nHome</string>
+
+  <string name="str_error_empty_old_password_message">Please enter old passwords.</string>
+  <string name="str_error_empty_new_password_message">Please enter new passwords.</string>
+  <string name="str_error_password_not_match_message">Make sure both new passwords match and try again.</string>
+  <!--<string name="str_error_empty_password_not_match_message">Password and Re-enter Password didn\'t match.</string>-->
+  <string name="str_hello_there">Hello there,</string>
+  <string name="str_local_love_vah_reward">Local Love-vah Reward:</string>
+  <string name="str_directions">Directions</string>
+  <string name="str_call_now">Call Now</string>
+  <string name="str_learn_more">Learn More</string>
+  <string name="str_about_this_business">About this Business:</string>
+  <string name="str_hours_of_operation">Hours of Operation:</string>
+
+  <string name="str_give_hint">Aw, go you. Fill in the details below and we\'ll make sure your friend feels the love.</string>
+  <string name="str_pending_gift_rewards">Pending Gift Rewards</string>
+  <string name="str_send_gift_to">To:</string>
+  <string name="str_send_gift_hint">imbodawala@gmail.com\nSent on 20190214</string>
+  <string name="str_login_user_name">hardik2.techark@gmail.com</string>
+  <string name="str_login_user_password">123456789</string>
+  <string name="str_filter_your_result">Filter Your Result</string>
+  <string name="str_kind_of_business">Kind Of Business</string>
+  <string name="str_in_what_city">In What City</string>
+  <string name="str_how_close_to_you">How Close To You?</string>
+  <string name="str_in_what_order">In What Order</string>
+  <string name="str_354_business_found">354 Business Found</string>
+  <string name="str_sort_by_z_a">Sort by Z - A</string>
+  <string name="str_sort_by_a_z">Sort by A - Z</string>
+  <string name="str_az_clear">AZ (clear)</string>
+  <string name="str_1_mile">1 Mile</string>
+  <string name="str_10_miles">10 Miles</string>
+  <string name="str_25_miles">25 Miles</string>
+  <string name="str_atoz_clear">AZ (Clear)</string>
+  <string name="str_ztoa_clear">ZA (Clear)</string>
+  <string name="str_1mile_clear">1 (Clear)</string>
+  <string name="str_10mile_clear">10 (Clear)</string>
+  <string name="str_25mile_clear">25 (Clear)</string>
+
+  <string name="str_search_business">Search business</string>
+  <string name="str_purchase_scanned">Purchase Scanned!</string>
+  <string name="str_you_ve_earned_a_heart">You\'ve Earned a Heart!</string>
+  <string name="str_you_ve_redeemed_reward">You\'ve Redeemed a Reward!</string>
+  <string name="str_you_ve_biggest_heart">You have the biggest heart.</string>
+  <!--<string name="str_heart_hint">Things are really heating up between us.We like it, and you\n Gorgeous.</string>-->
+  <string name="str_reward_hint">Enjoy! Also, is it too soon to encourage you to start\n earning a new reward? Smooches!</string>
+  <string name="str_reward_redeemed_hint">BAM! Things just got real. Enjoy your reward, LOVEVA!</string>
+  <!--<string name="str_earned_heart_hint">We suspected you were a good person, but you\'ve just confirmed it. Let\'s seal our friendship with a high five.</string>-->
+  <string name="str_biggest_heart_hint">Your lucky friend will receive an email shortly. How long it takes them to thank you personally, is TBD (but we hope it\'s really, really soon).</string>
+  <string name="str_that_didn_t_go_as_planned">That didn\'t go as planned</string>
+  <string name="str_invalid_qr_code_hint">Looks like you\'re trying to scan something we don\'t understand. Ask your cashier for the LOVEVA QR code!</string>
+  <string name="str_cancel_gift_hint">Dang! I thought there were no take backs?\nWell, you have your gift back now.</string>
+
+  <string name="str_ok_got_it">OK, Got it!</string>
+  <string name="str_post_on_twitter">Post on\nTwitter</string>
+  <string name="str_share_on_facebook">Share on\nFacebook</string>
+  <string name="str_buy_local_champion">Buy Local Champion</string>
+  <string name="str_promoted_business">Promoted Business</string>
+  <string name="str_give_your_reward">Give Your\nReward</string>
+  <string name="str_see_all_rewards">See All Rewards</string>
+  <string name="str_close">Close</string>
+  <string name="str_closed">Closed</string>
+  <string name="str_try_again">Try again?</string>
+  <string name="str_reset_your_password_hint">Reset your password?</string>
+  <string name="str_submit">Submit</string>
+  <string name="str_back_to_login">Back to login</string>
+  <string name="str_reset_your_password">Reset your password?</string>
+  <string name="str_hang_on_love_vah_we_re_loading_the_businesses">Hang On Love-vah, We\'re Loading the Businesses</string>
+  <string name="str_hang_on_love_vah_we_re_loading_the_reward">Hang On Love-vah, We\'re Loading the Rewards List.</string>
+  <string name="str_fb_after_post_message">You officially have the sweetest post in the news feed. Keep it up, love-vah!</string>
+  <string name="str_congratulations">Congratulations!</string>
+
+</resources>

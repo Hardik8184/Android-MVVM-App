@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="ScannerOverlay">
+    <attr format="integer" name="square_width"/>
+    <attr format="integer" name="square_height"/>
+    <attr format="color" name="line_color"/>
+    <attr format="integer" name="line_width"/>
+    <attr format="integer" name="line_speed"/>
+  </declare-styleable>
+
+  <declare-styleable name="BarcodeReader">
+    <attr format="boolean" name="auto_focus"/>
+    <attr format="boolean" name="use_flash"/>
+  </declare-styleable>
+
+  <declare-styleable name="FButton">
+    <attr format="boolean" name="shadowEnabled"/>
+    <attr format="color" name="buttonColor"/>
+    <attr format="color" name="shadowColor"/>
+    <attr format="dimension" name="shadowHeight"/>
+    <attr format="dimension" name="cornerRadius"/>
+  </declare-styleable>
+
+</resources>

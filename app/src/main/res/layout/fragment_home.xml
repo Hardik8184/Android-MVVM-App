@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <import type="android.text.Html" />
+
+    <variable
+      name="viewModel"
+      type="com.hardik.mvvmapp.fragment.home.viewmodel.HomeFragmentViewModel" />
+
+  </data>
+
+  <LinearLayout
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="@dimen/_25sdp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp">
+
+        <ImageView
+          android:id="@+id/imgProgressBanner"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_175sdp"
+          android:contentDescription="@string/app_name"
+          tools:src="@drawable/progress_banner1" />
+
+        <TextView
+          android:id="@+id/unUsedRewardCount"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center|bottom"
+          android:fontFamily="@font/kreon_bold"
+          android:gravity="center|start"
+          android:padding="@dimen/_2sdp"
+          android:textColor="@color/colorBlack"
+          android:textSize="@dimen/_10sdp"
+          android:visibility="visible"
+          tools:text="You have 1 Unused Reward." />
+
+      </FrameLayout>
+
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:gravity="center|top">
+
+        <ImageView
+          android:id="@+id/lastBadgeImage"
+          android:layout_width="@dimen/_60sdp"
+          android:layout_height="@dimen/_60sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:contentDescription="@string/app_name"
+          tools:src="@drawable/no_badge" />
+
+        <View
+          android:layout_width="@dimen/_1sdp"
+          android:layout_height="@dimen/_65sdp"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginLeft="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:layout_marginRight="@dimen/_10sdp"
+          android:background="@color/gray" />
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kreon_regular"
+            android:gravity="center|start"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/str_hello_there"
+            android:textColor="@color/dashboard_welcome_greeting"
+            android:textSize="@dimen/_14sdp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            android:layout_marginBottom="@dimen/_minus10sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/mathlete_bulky"
+            android:gravity="center|start"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="@{viewModel.strUserName}"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_70sdp"
+            tools:text="Hardik Dungrani" />
+
+          <TextView
+            android:id="@+id/txtLastBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center|start"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/dashboard_latest_badge"
+            android:textSize="@dimen/_10sdp"
+            tools:text="Latest Badge: Bank Love-vah" />
+
+        </LinearLayout>
+
+      </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/llReward"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_5sdp"
+      android:background="@color/colorWhite"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:padding="@dimen/_5hsdp"
+      android:visibility="visible">
+
+      <LinearLayout
+        android:id="@+id/llGift"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:background="@drawable/btn_shadow_red_selected"
+        android:gravity="center|start"
+        android:onClick='@{() -> viewModel.giftRewardClick()}'
+        android:orientation="horizontal">
+
+        <ImageView
+          android:layout_width="@dimen/_26sdp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="@dimen/_4sdp"
+          android:layout_marginLeft="@dimen/_4sdp"
+          android:contentDescription="@string/app_name"
+          android:padding="@dimen/_3sdp"
+          android:src="@drawable/ic_white_share_reward" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_4sdp"
+          android:layout_marginLeft="@dimen/_4sdp"
+          android:fontFamily="@font/kreon_bold"
+          android:padding="@dimen/_1sdp"
+          android:text="@string/str_gift"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_10sdp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/llScan"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:background="@drawable/btn_shadow_red_selected"
+        android:gravity="center|start"
+        android:onClick='@{() -> viewModel.scanClick()}'
+        android:orientation="horizontal">
+
+        <ImageView
+          android:layout_width="@dimen/_26sdp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="@dimen/_4sdp"
+          android:layout_marginLeft="@dimen/_4sdp"
+          android:contentDescription="@string/app_name"
+          android:padding="@dimen/_3sdp"
+          android:src="@drawable/ic_white_heart" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_4sdp"
+          android:layout_marginLeft="@dimen/_4sdp"
+          android:fontFamily="@font/kreon_bold"
+          android:padding="@dimen/_1sdp"
+          android:text="@string/str_scan"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_10sdp" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</layout>
